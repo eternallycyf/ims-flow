@@ -2,7 +2,6 @@ import { defineConfig } from 'dumi';
 import type { SiteThemeConfig } from 'dumi-theme-antd-style';
 import { footer } from 'ims-template-config';
 import path from 'path';
-import { featuresZh } from './config/features';
 import style from './docs/siteIndexStyle';
 import { homepage, name as repo } from './package.json';
 
@@ -15,42 +14,42 @@ const themeConfig: SiteThemeConfig = {
   logo: isProd ? '/images/origin.png' : `/${repo}/images/origin.png`,
   hero: {
     'zh-CN': {
-      description: 'Ant Design Style 文档站主题包',
+      description: 'React Flow 可视化流程编辑与逻辑编排',
       actions: [
         {
           type: 'primary',
           text: '开始使用',
-          link: '/guide',
+          link: '/components',
         },
         {
           text: 'Github',
-          link: 'https://github.com/eternallycyf/',
+          link: homepage,
           openExternal: true,
         },
       ],
-      features: featuresZh,
     },
     'en-US': {
-      description: 'dumi2 theme similar to antd v5 website',
+      description: 'React Flow editor and logic runtime',
       actions: [
         {
           type: 'primary',
           text: 'Start',
-          link: '/guide-en',
+          link: '/components',
         },
         {
-          text: 'Config',
-          link: '/config-en',
+          text: 'Github',
+          link: homepage,
+          openExternal: true,
         },
       ],
     },
   },
   socialLinks: { github: homepage },
   apiHeader: {
-    sourceUrl: `https://github.com/eternallycyf/ims-template/tree/master/src/components/{atomId}/index.tsx`,
-    docUrl: `https://github.com/eternallycyf/ims-template/tree/master/src/components/{atomId}/index.md`,
-    pkg: 'ims-template',
-    match: ['/ims-template/src/component'],
+    sourceUrl: `https://github.com/eternallycyf/ims-flow/tree/master/src/components/{atomId}/index.tsx`,
+    docUrl: `https://github.com/eternallycyf/ims-flow/tree/master/src/components/{atomId}/index.md`,
+    pkg: 'ims-flow',
+    match: ['/ims-flow/src/component'],
   },
   footerConfig: {
     bottom: '2023',
